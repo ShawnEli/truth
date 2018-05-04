@@ -54,7 +54,7 @@ Page({
         })
     },
     daojishi() {
-        let start = Date.parse(new Date("2018-05-03 00:00:00"))
+        let start = Date.parse(new Date("2018-05-03 21:00:00"))
         //   console.log(new Date("2018-05-03"))
         let now = Date.parse(new Date())
         //   console.log(now)
