@@ -1,1 +1,5 @@
 /* pages/weather/weather.wxss */
+.slide-image{
+    width: 100vw;
+    height: 100%;
+}
