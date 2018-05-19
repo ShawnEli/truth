@@ -4,15 +4,19 @@
         "pages/weather/weather"
     ],
     "tabBar": {
-        "position": "top",
+        "position": "bottom",
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "text": "首页"
+                "text": "美文推荐",
+                "iconPath": "/images/document.png",
+                "selectedIconPath": "/images/document_fill.png"
             },
             {
                 "pagePath": "pages/weather/weather",
-                "text": "天气"
+                "text": "天气",
+                "iconPath": "images/日落.png",
+                "selectedIconPath": "images/日出.png"
             }
         ]
     },

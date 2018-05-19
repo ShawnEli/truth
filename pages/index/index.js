@@ -13,7 +13,6 @@ Page({
         author:'',
         digest:'',
         content:'',
-        
     },
     onLoad: function () {
         if (app.globalData.userInfo) {
@@ -83,10 +82,8 @@ Page({
 
     },
     daojishi() {
-        let start = Date.parse(new Date("2018-05-03 21:00:00"))
-        console.log(new Date("2018-05-03 21:00:00"))
+        let start = Date.parse(new Date("2018-05-03"))
         let now = Date.parse(new Date())
-        console.log(now)
         let daojishi = (now - start) / 1000
         let day = Math.floor(daojishi / 86400);
         let hour = Math.floor(daojishi % 86400 / 3600);
@@ -96,5 +93,5 @@ Page({
         this.setData({
             time
         })
-    }
+    },
 })

@@ -6,7 +6,7 @@
             </swiper-item>
         </block>
     </swiper>
-    <view style='margin-top: 40rpx;'>
+     <view style='margin-top: 40rpx;'>
         <view>
             当前定位: {{location}}{{county}}
         </view>
@@ -24,5 +24,5 @@
                 更新时间: {{weather.update.loc}}
             </view>
         </view>
-    </view>
+    </view> 
 </view>

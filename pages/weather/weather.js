@@ -75,6 +75,7 @@ Page({
     },
     onShow: function () {
         this.getLocation()
+        // this.getDouBan()
     },
     getWeather(lng, lat) {
         
@@ -112,6 +113,20 @@ Page({
                     }
                 })
             }
+        })
+    },
+    getDouBan(){
+        let param = {
+            apikey: "0b2bdeda43b5688921839c8ecb20399b",//固定值0b2bdeda43b5688921839c8ecb20399b
+            city: "杭州", //所在城市，例如北京、上海等
+            start: 0, //分页使用，表示第几页
+            count: 100, //分页使用，表示数量
+            client: "somemessage", //客户端信息。可为空
+            udid: "dddddddddddddddddddddd", //用户 id。可为空
+        }
+        app.post("https://api.douban.com/v2/movie/in_theaters", param).then((res) => {
+           console.log(res)
+            
         })
     },
 })
