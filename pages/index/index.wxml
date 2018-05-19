@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="usermotto">
+    <!-- <view class="usermotto">
         <text class="user-motto">{{motto}}</text>
     </view>
     <view class="userinfo">
@@ -12,5 +12,22 @@
     </view>
     <view style='margin-top: 100rpx'>
         {{time}}
-    </view>
+    </view> -->
+
+      <view class='title'>
+        <text >{{title}}</text>
+      </view>
+      <view class='author'>
+        <text>作者：{{author}}</text>
+      </view>
+      <view img class="imgf" >
+        <image class='img' src="http://img.ivsky.com/img/tupian/pre/201801/18/meilidedahai-003.jpg"></image>
+      </view>
+      <view class="content" wx:for="{{content}}">
+        <view style='margin: 10rpx;line-height:25px;text-indent: 1em;'>{{item}}</view>
+      </view>
+
+   
+    
+  
 </view>

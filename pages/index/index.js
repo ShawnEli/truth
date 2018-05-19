@@ -8,7 +8,12 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
-        timer: null
+        timer: null,
+        title:'',
+        author:'',
+        digest:'',
+        content:'',
+        
     },
     onLoad: function () {
         if (app.globalData.userInfo) {
@@ -37,10 +42,10 @@ Page({
                 }
             })
         }
-        this.daojishi()
-        this.data.timer = setInterval(() => {
-            this.daojishi()
-        }, 1000)
+        // this.daojishi()
+        // this.data.timer = setInterval(() => {
+        //     this.daojishi()
+        // }, 1000)
 
     },
     onUnload() {
@@ -50,9 +55,32 @@ Page({
         console.log(e)
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
-            userInfo: e.detail.userInfo,
+            userInfo:e.detail.userInfo,
             hasUserInfo: true
         })
+    },
+    onShow(){
+      this.getAriticle()
+
+    },
+    getAriticle(){
+      app.post("https://interface.meiriyiwen.com/article/today?dev=1").then((res)=>
+      {
+        // var con = res.data.content.replace(/<p>/g, "<view>").replace(/<\/p>/g, "</view>")
+        let con = res.data.content.replace(/<p>/g, "");
+        let content = con.split("</p>");
+        // console.log(content)
+        this.setData({
+          title: res.data.title,
+          author:res.data.author,
+          digest:res.data.digest,
+          content:content
+        })
+      
+
+      })
+
+
     },
     daojishi() {
         let start = Date.parse(new Date("2018-05-03 21:00:00"))
