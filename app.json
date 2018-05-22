@@ -1,29 +1,30 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/weather/weather"
-    ],
-    "tabBar": {
-        "position": "bottom",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "美文推荐",
-                "iconPath": "/images/document.png",
-                "selectedIconPath": "/images/document_fill.png"
-            },
-            {
-                "pagePath": "pages/weather/weather",
-                "text": "天气",
-                "iconPath": "images/日落.png",
-                "selectedIconPath": "images/日出.png"
-            }
-        ]
-    },
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
-    }
+  "pages": [
+    "pages/index/index",
+    "pages/weather/weather",
+    "pages/history/history"
+  ],
+  "tabBar": {
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "美文推荐",
+        "iconPath": "/images/document.png",
+        "selectedIconPath": "/images/document_fill.png"
+      },
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "历史文章",
+        "iconPath": "images/日落.png",
+        "selectedIconPath": "images/日出.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
 }
