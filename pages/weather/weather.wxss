@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     font-size: 18px;
+    /* background-color:  */
 }
 
 /* .every {
@@ -26,11 +27,12 @@
   margin:8px 15px;
   padding: 10rpx;
   border-radius: 10rpx;
-  background-color: #eee;
+  background-color:#eee;
   font-size: 14px;
 }
 .sss{
     text-overflow: ellipsis;
+    /* 文字溢出。。。 */
     overflow: hidden;
     white-space: nowrap;
 }

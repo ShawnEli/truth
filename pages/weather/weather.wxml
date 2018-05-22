@@ -28,9 +28,9 @@
   <view  class="history">
 
     <view wx:for="{{allAirtical}}" class="every" bindtap="next" data-id="{{index}}">
-    <view style='display: flex;justify-content: space-between;margin-bottom: 20rpx;'> 
-        <text style='font-weight: bold'>{{item.title}}</text>
-        <text>{{item.author}}</text>
+    <view style='display: flex;justify-content:space-between;margin-bottom: 20rpx;'> 
+        <text style='font-weight: bold;font-size:18px'>{{item.title}}</text>
+        <!-- <text>{{item.author}}</text> -->
     </view>
     <view class="sss">{{item.digest}}</view>
      
