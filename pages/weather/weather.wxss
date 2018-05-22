@@ -1,19 +1,36 @@
 /* pages/weather/weather.wxss */
-.slide-image{
+
+.slide-image {
     width: 100vw;
     height: 100%;
 }
-.history{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: 18px
-  
 
+.history {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
 }
+
+/* .every {
+    margin: 20rpx;
+    background: #eee;
+    border-radius: 10rpx;
+    padding: 10rpx;
+    display: flex;
+    flex-direction: column;
+    font-size: 24rpx;
+} */
 
 .every{
   margin:8px 15px;
+  padding: 10rpx;
+  border-radius: 10rpx;
   background-color: #eee;
   font-size: 14px;
+}
+.sss{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
