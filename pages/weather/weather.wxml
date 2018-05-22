@@ -28,8 +28,12 @@
   <view  class="history">
 
     <view wx:for="{{allAirtical}}" class="every" bindtap="next" data-id="{{index}}">
-      {{item.title}}
+    <view > {{item.title+" "+item.author}}{{}}</view>
+    <view>{{item.digest}}</view>
+     
     </view>
+   
+
    
 
 

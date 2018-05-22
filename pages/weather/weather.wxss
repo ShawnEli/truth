@@ -11,6 +11,9 @@
   
 
 }
+
 .every{
-  margin:8px 15px
+  margin:8px 15px;
+  background-color: #eee;
+  font-size: 14px;
 }
