@@ -27,7 +27,7 @@
   margin:8px 15px;
   padding: 10rpx;
   border-radius: 10rpx;
-  background-color:#eee;
+  background-color:#99CCCC;
   font-size: 14px;
 }
 .sss{
@@ -35,4 +35,8 @@
     /* 文字溢出。。。 */
     overflow: hidden;
     white-space: nowrap;
+}
+.date{
+  margin:20px 20px;
+
 }

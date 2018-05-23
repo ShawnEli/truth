@@ -2,17 +2,21 @@
   "pages": [
     "pages/index/index",
     "pages/weather/weather",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/select/select"
   ],
   "tabBar": {
-    "position": "bottom",
+    "position": "top",
+    "backgroundColor":"#99CCCC",
+    "selectedColor":"#000000",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "美文推荐",
+        "text": "今日文章",
         "iconPath": "/images/document.png",
         "selectedIconPath": "/images/document_fill.png"
       },
+    
       {
         "pagePath": "pages/weather/weather",
         "text": "历史文章",
@@ -23,7 +27,7 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#99CCCC",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   }

@@ -1,18 +1,7 @@
 <!--index.wxml-->
+
 <view class="container">
-    <!-- <view class="usermotto">
-        <text class="user-motto">{{motto}}</text>
-    </view>
-    <!-- <view class="userinfo">
-        <button wx:if="{{!hasUserInfo && canIUse}}" type='primary' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 你如果来了，请告诉我 </button>
-        <block wx:else>
-            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </block>
-    </view> 
-    <view style='margin-top: 100rpx'>
-        {{time}}
-    </view> -->
+ 
 
       <view class='title'>
         <text >{{title}}</text>

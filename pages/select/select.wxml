@@ -1,0 +1,12 @@
+<!--pages/select/select.wxml-->
+
+<view class='title'>
+  <text>{{title}}</text>
+</view>
+<view class='author'>
+  <text>{{author}}</text>
+</view>
+
+<view class="content" wx:for="{{content}}">
+  <view style='margin-top:10px'>{{item}}</view>
+</view>

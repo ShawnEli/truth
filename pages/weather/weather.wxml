@@ -1,43 +1,29 @@
 <view>
-  <!-- <swiper indicator-dots autoplay interval="{{5000}}" duration="{{200}}">
-        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-            <swiper-item>
-                <image src="{{item}}" class="slide-image" />
-            </swiper-item>
-        </block>
-    </swiper>
-     <view style='margin-top: 40rpx;'>
-        <view>
-            当前定位: {{location}}{{county}}
-        </view>
-        <view>
-            <view>
-                天气: {{weather.now.cond_txt}}
-            </view>
-            <view>
-                当前温度: {{weather.now.tmp}}, 当前体感温度: {{weather.now.fl}}
-            </view> 
-            <view>
-                风向: {{weather.now.wind_dir}}, 风力: {{weather.now.wind_sc}}
-            </view>
-            <view>
-                更新时间: {{weather.update.loc}}
-            </view>
-        </view>
-    </view>  -->
-  <view  class="history">
 
-    <view wx:for="{{allAirtical}}" class="every" bindtap="next" data-id="{{index}}">
-    <view style='display: flex;justify-content:space-between;margin-bottom: 20rpx;'> 
-        <text style='font-weight: bold;font-size:18px'>{{item.title}}</text>
+  <view class="history">
+  <view>
+  <picker mode="date" start="" end="{{endDay}}" bindchange='bindTimeChange' class='date'>选择日期读文章：{{date}}</picker>
+  <view style='margin: 20px'>近日文章</view>
+
+</view>
+
+<view>
+
+  <view wx:for="{{allAirtical}}" class="every" bindtap="next" data-id="{{index}}">
+      <view style='display: flex;justify-content:space-between;margin: 20rpx;'>
+        <text style='font-size:18px'>{{item.title}}</text>
         <!-- <text>{{item.author}}</text> -->
+      </view>
+      <!-- <view class="sss">{{item.digest}}</view> -->
+
     </view>
-    <view class="sss">{{item.digest}}</view>
-     
-    </view>
+</view>
    
 
-   
+  
+
+
+
 
 
 

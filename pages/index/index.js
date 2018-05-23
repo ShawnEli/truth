@@ -15,6 +15,7 @@ Page({
         content:'',
     },
     onLoad: function () {
+
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
@@ -40,11 +41,14 @@ Page({
                     })
                 }
             })
+      
         }
         // this.daojishi()
         // this.data.timer = setInterval(() => {
         //     this.daojishi()
         // }, 1000)
+        this.getAriticle()
+
 
     },
     onUnload() {
@@ -59,8 +63,7 @@ Page({
         })
     },
     onShow(){
-      this.getAriticle()
-
+    
     },
     getAriticle(){
       app.post("https://interface.meiriyiwen.com/article/today?dev=1").then((res)=>

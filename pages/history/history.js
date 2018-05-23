@@ -18,11 +18,43 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     // console.log(options)
-    this.setData({
-      all: app.globalData.hhh,
-      id: options.id,
-    })
+    if(options.id !=null){
+      this.setData({
+        all: app.globalData.hhh,
+        id: options.id,
+      })
+      let all = this.data.all
+      let id = this.data.id
+      let con = all[id].content.replace(/<p>/g, "");
+      let content = con.split("</p>");
+      this.setData({
+        title: all[id].title,
+        author: all[id].author,
+        content: content,
+      })
+    }
+    if(options.date !=null){
+      let date=options.date.replace(/-/g, "")
+      
+      let url = "https://interface.meiriyiwen.com/article/day?dev=1&date=" +date
+      app.post(url).then((res) => {
+        let con = res.data.content.replace(/<p>/g, "");
+        let content = con.split("</p>");
+        // console.log(content)
+        this.setData({
+          title: res.data.title,
+          author: res.data.author,
+          digest: res.data.digest,
+          content: content
+        })
+
+
+      })
+    }
+    
+    
     console.log(this.data.id)
   },
 
@@ -37,15 +69,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let all=this.data.all
-    let id=this.data.id
-    let con =all[id].content.replace(/<p>/g, "");
-    let content = con.split("</p>");
-    this.setData({
-      title: all[id].title,
-      author: all[id].author,
-      content: content,
-    })
+    // let all=this.data.all
+    // let id=this.data.id
+    // let con =all[id].content.replace(/<p>/g, "");
+    // let content = con.split("</p>");
+    // this.setData({
+    //   title: all[id].title,
+    //   author: all[id].author,
+    //   content: content,
+    // })
   
   },
 

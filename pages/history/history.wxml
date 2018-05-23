@@ -20,9 +20,7 @@
       <view class='author'>
         <text>{{author}}</text>
       </view>
-      <!-- <view img class="imgf" >
-        <image class='img' src="http://img.ivsky.com/img/tupian/pre/201801/18/meilidedahai-003.jpg"></image>
-      </view> -->
+
       <view class="content" wx:for="{{content}}">
         <view style='margin-top:10px'>{{item}}</view>
       </view>
