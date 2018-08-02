@@ -15,8 +15,6 @@
       <view class="content" wx:for="{{content}}">
         <view style='margin-top:10px'>{{item}}</view>
       </view>
-
-   
     
   
 </view>
