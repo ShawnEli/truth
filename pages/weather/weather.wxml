@@ -1,33 +1,24 @@
 <view>
-
   <view class="history">
-  <view>
-  <picker mode="date" start="" end="{{endDay}}" bindchange='bindTimeChange' class='date'>选择日期读文章：{{date}}</picker>
-  <view style='margin: 20px'>近日文章</view>
-
-</view>
-
-<view>
-
-  <view wx:for="{{allAirtical}}" class="every" bindtap="next" data-id="{{index}}">
-      <view style='display: flex;justify-content:space-between;margin: 20rpx;'>
-        <text style='font-size:18px'>{{item.title}}</text>
-        <!-- <text>{{item.author}}</text> -->
-      </view>
-      <!-- <view class="sss">{{item.digest}}</view> -->
-
-    </view>
-</view>
-   
-
-  
-
-
-
-
-
-
-
+  <view class='main-cell' bindtap="showDate">
+    <view>{{"请选择预约日期"}}</view>
+    <image src="../../images/arrow_right.png" mode="aspectFill" class="s4s-rt"></image>
   </view>
-
+    <view>
+      <picker mode="date" start="" end="{{endDay}}" bindchange='bindTimeChange' class='date'>选择日期读文章：{{date}}</picker>
+      <view style='margin: 20px'>近日文章</view>
+    </view>
+    <view>
+      <view wx:for="{{allAirtical}}" class="every" bindtap="next" data-id="{{index}}">
+        <view style='display: flex;justify-content:space-between;margin: 20rpx;'>
+          <text style='font-size:18px'>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 灰色蒙层 -->
+    <view class="make" wx:if="{{maskShow}}" bindtap="closeShow"></view>
+    <!-- 灰色蒙层 -->
+  <calendar show-calendar="{{showCalendar}}"></calendar>
+    
 </view>

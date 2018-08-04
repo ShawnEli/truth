@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "短篇集锦"
+  "navigationBarTitleText": "短篇集锦",
+  "usingComponents": {
+    "calendar": "../../component/calendar/calendar"
+  }
 }

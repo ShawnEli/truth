@@ -2,8 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/weather/weather",
-    "pages/history/history",
-    "pages/select/select"
+    "pages/history/history"
   ],
   "tabBar": {
     "position": "top",

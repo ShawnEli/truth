@@ -6,7 +6,9 @@ Page({
     date:"2018-05-23",
     endDay:"",
     imgUrls: ["http://img2.imgtn.bdimg.com/it/u=3588772980,2454248748&fm=27&gp=0.jpg", "http://img0.imgtn.bdimg.com/it/u=2801862717,279628383&fm=27&gp=0.jpg", "http://img4.imgtn.bdimg.com/it/u=1293919120,3114443152&fm=27&gp=0.jpg"],
-    weather: null
+    weather: null,
+    showCalendar: false,
+    maskShow: false
   },
   onLoad: function (options) {
     this.getEndDay()
@@ -17,6 +19,12 @@ Page({
     // this.getDouBan()
 
   },
+  closeShow(e) {
+    this.setData({
+      maskShow: false,
+      showCalendar: false
+    })
+  },
   getEndDay(){
     let  myDate = new Date()
     let endday=myDate.toLocaleDateString()
@@ -26,6 +34,12 @@ Page({
     })
     
 
+  },
+  showDate() {
+    this.setData({
+      showCalendar: !this.data.showCalendar,
+      maskShow: true
+    })
   },
   getHistory() {
     var myDate = new Date()
