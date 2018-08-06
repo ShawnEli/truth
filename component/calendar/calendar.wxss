@@ -1,0 +1,107 @@
+.calendar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 880rpx;
+    z-index: 101;
+    background-color: #fff;
+    -webkit-transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    padding: 60rpx 40rpx 10rpx;
+}
+.calendar-title{
+    font-size: 36rpx;
+    color: #474245;
+}
+.headbox {
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    padding: 40rpx 0rpx 45rpx;
+}
+.headdate {
+    font-size: 30rpx;
+    text-align: center;
+    width: 72rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    margin: 10rpx;
+}
+
+.months {
+   height: 770rpx;
+}
+.month{
+    border-bottom: 1rpx solid #eaeaea;
+}
+
+.mouthhead {
+    text-align: center;
+    color: #474245;
+    font-size: 30rpx;
+    margin: 50rpx 0 30rpx;
+}
+
+
+
+.daybox {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.day {
+    width: 72rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    text-align: center;
+    overflow: hidden;
+    color: #6f6f6f;
+    font-size: 30rpx;
+    margin: 10rpx;
+}
+
+.day2 {
+    color: #04babe;
+    width: 107rpx;
+    height: 107rpx;
+    line-height: 107rpx;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    margin-top: 0;
+}
+
+.actname {
+    color: #04babe;
+    position: absolute;
+    font-size: 20rpx;
+    top: -30rpx;
+    width: 107rpx;
+    text-align: center;
+}
+
+.actname2 {
+    color: #04babe;
+    position: absolute;
+    font-size: 20rpx;
+    bottom: -30rpx;
+    width: 107rpx;
+    text-align: center;
+}
+
+.bc {
+    background-image: linear-gradient(149deg, #FFA018 0%, #FF7907 100%);
+    color: white !important;
+    border-radius: 50%;
+}
+
+.bc2 {
+    color: white !important;
+}
+
+.none88 {
+    height: 88rpx;
+    width: 750rpx;
+}

@@ -1,7 +1,7 @@
 <view>
   <view class="history">
   <view class='main-cell' bindtap="showDate">
-    <view>{{"请选择预约日期"}}</view>
+    <view>{{date}}</view>
     <image src="../../images/arrow_right.png" mode="aspectFill" class="s4s-rt"></image>
   </view>
     <view>
@@ -17,8 +17,8 @@
     </view>
   </view>
   <!-- 灰色蒙层 -->
-    <view class="make" wx:if="{{maskShow}}" bindtap="closeShow"></view>
+    <!-- <view class="make" wx:if="{{maskShow}}" bindtap="closeShow"></view> -->
     <!-- 灰色蒙层 -->
-  <calendar show-calendar="{{showCalendar}}"></calendar>
+  <calendar show-calendar="{{showCalendar}}" choose-date="{{date}}"></calendar>
     
 </view>
