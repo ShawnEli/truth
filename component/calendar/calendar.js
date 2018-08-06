@@ -11,7 +11,7 @@ Component({
         },
         dayCount: {
             type: Number,
-            value: 32
+            value: 0
         },
         mask: {
             type: Boolean,
@@ -159,9 +159,9 @@ Component({
                 preChoose: thischoose || "0|0",
                 selectDay: this.data.date[choose[0]][choose[1]],
                 showCalendar: false,
-                mask: false,
                 chooseDate: this.data.date[choose[0]][choose[1]].re
             })
+            this.triggerEvent('show', this.data.date[choose[0]][choose[1]]);
         }
     }
 })

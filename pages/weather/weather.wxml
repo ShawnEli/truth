@@ -1,13 +1,13 @@
 <view>
   <view class="history">
   <view class='main-cell' bindtap="showDate">
-    <view>{{date}}</view>
+    <view>{{chooseDate}}</view>
     <image src="../../images/arrow_right.png" mode="aspectFill" class="s4s-rt"></image>
   </view>
-    <view>
+    <!-- <view>
       <picker mode="date" start="" end="{{endDay}}" bindchange='bindTimeChange' class='date'>选择日期读文章：{{date}}</picker>
       <view style='margin: 20px'>近日文章</view>
-    </view>
+    </view> -->
     <view>
       <view wx:for="{{allAirtical}}" class="every" bindtap="next" data-id="{{index}}">
         <view style='display: flex;justify-content:space-between;margin: 20rpx;'>
@@ -19,6 +19,6 @@
   <!-- 灰色蒙层 -->
     <!-- <view class="make" wx:if="{{maskShow}}" bindtap="closeShow"></view> -->
     <!-- 灰色蒙层 -->
-  <calendar show-calendar="{{showCalendar}}" choose-date="{{date}}"></calendar>
+  <calendar show-calendar="{{showCalendar}}" choose-date="{{chooseDate}}" day-count="{{32}}" bind:show="show"></calendar>
     
 </view>
